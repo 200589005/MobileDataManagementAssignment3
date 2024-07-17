@@ -18,6 +18,14 @@
 		187E56DF2C45BE030059B52E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E56DE2C45BE030059B52E /* Constant.swift */; };
 		187E56E22C45BFAB0059B52E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E56E12C45BFAB0059B52E /* API.swift */; };
 		187E56E52C45C3750059B52E /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E56E42C45C3750059B52E /* Dictionary+Extension.swift */; };
+		18B67FA32C482B3000A5DACD /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18B67FA22C482B3000A5DACD /* IQKeyboardManagerSwift */; };
+		18B67FA62C482B3B00A5DACD /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18B67FA52C482B3B00A5DACD /* SDWebImage */; };
+		18B67FA82C482B3B00A5DACD /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 18B67FA72C482B3B00A5DACD /* SDWebImageMapKit */; };
+		18B67FAD2C482B6400A5DACD /* MovieListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B67FAB2C482B6400A5DACD /* MovieListTableViewCell.xib */; };
+		18B67FAE2C482B6400A5DACD /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B67FAC2C482B6400A5DACD /* MovieListTableViewCell.swift */; };
+		18B67FB12C482BB200A5DACD /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B67FAF2C482BB200A5DACD /* UIViewControllerExtensions.swift */; };
+		18B67FB22C482BB200A5DACD /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B67FB02C482BB200A5DACD /* UIImage+Extension.swift */; };
+		18B67FB42C482EA000A5DACD /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B67FB32C482EA000A5DACD /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +42,11 @@
 		187E56DE2C45BE030059B52E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		187E56E12C45BFAB0059B52E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		187E56E42C45C3750059B52E /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		18B67FAB2C482B6400A5DACD /* MovieListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieListTableViewCell.xib; sourceTree = "<group>"; };
+		18B67FAC2C482B6400A5DACD /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
+		18B67FAF2C482BB200A5DACD /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		18B67FB02C482BB200A5DACD /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		18B67FB32C482EA000A5DACD /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B67FA62C482B3B00A5DACD /* SDWebImage in Frameworks */,
+				18B67FA82C482B3B00A5DACD /* SDWebImageMapKit in Frameworks */,
+				18B67FA32C482B3000A5DACD /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +88,7 @@
 				187E56E02C45BFA40059B52E /* API */,
 				187E56DD2C45BDF80059B52E /* Constant */,
 				187E56D82C45BD520059B52E /* Models */,
-				187E56D62C45B3BB0059B52E /* MovieSearchViewController.swift */,
+				18B67FAA2C482B5800A5DACD /* View */,
 				187E56C82C45B2EE0059B52E /* Main.storyboard */,
 				187E56CB2C45B2EF0059B52E /* Assets.xcassets */,
 				187E56CD2C45B2EF0059B52E /* LaunchScreen.storyboard */,
@@ -109,9 +125,30 @@
 		187E56E32C45C3630059B52E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				18B67FB02C482BB200A5DACD /* UIImage+Extension.swift */,
+				18B67FAF2C482BB200A5DACD /* UIViewControllerExtensions.swift */,
 				187E56E42C45C3750059B52E /* Dictionary+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		18B67FA92C482B5300A5DACD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18B67FAC2C482B6400A5DACD /* MovieListTableViewCell.swift */,
+				18B67FAB2C482B6400A5DACD /* MovieListTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		18B67FAA2C482B5800A5DACD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18B67FA92C482B5300A5DACD /* Cell */,
+				187E56D62C45B3BB0059B52E /* MovieSearchViewController.swift */,
+				18B67FB32C482EA000A5DACD /* MovieDetailViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +167,11 @@
 			dependencies = (
 			);
 			name = MovieSearchApp;
+			packageProductDependencies = (
+				18B67FA22C482B3000A5DACD /* IQKeyboardManagerSwift */,
+				18B67FA52C482B3B00A5DACD /* SDWebImage */,
+				18B67FA72C482B3B00A5DACD /* SDWebImageMapKit */,
+			);
 			productName = MovieSearchApp;
 			productReference = 187E56BF2C45B2EE0059B52E /* MovieSearchApp.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +200,10 @@
 				Base,
 			);
 			mainGroup = 187E56B62C45B2EE0059B52E;
+			packageReferences = (
+				18B67FA12C482B3000A5DACD /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				18B67FA42C482B3B00A5DACD /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 187E56C02C45B2EE0059B52E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -174,6 +220,7 @@
 			files = (
 				187E56CC2C45B2EF0059B52E /* Assets.xcassets in Resources */,
 				187E56CF2C45B2EF0059B52E /* Base in Resources */,
+				18B67FAD2C482B6400A5DACD /* MovieListTableViewCell.xib in Resources */,
 				187E56CA2C45B2EE0059B52E /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,11 +234,15 @@
 			files = (
 				187E56C32C45B2EE0059B52E /* AppDelegate.swift in Sources */,
 				187E56DC2C45BDB50059B52E /* MovieSearch.swift in Sources */,
+				18B67FB12C482BB200A5DACD /* UIViewControllerExtensions.swift in Sources */,
 				187E56DA2C45BD5F0059B52E /* MovieSearchRating.swift in Sources */,
+				18B67FB42C482EA000A5DACD /* MovieDetailViewController.swift in Sources */,
 				187E56E52C45C3750059B52E /* Dictionary+Extension.swift in Sources */,
 				187E56C52C45B2EE0059B52E /* SceneDelegate.swift in Sources */,
 				187E56D72C45B3BB0059B52E /* MovieSearchViewController.swift in Sources */,
 				187E56DF2C45BE030059B52E /* Constant.swift in Sources */,
+				18B67FAE2C482B6400A5DACD /* MovieListTableViewCell.swift in Sources */,
+				18B67FB22C482BB200A5DACD /* UIImage+Extension.swift in Sources */,
 				187E56E22C45BFAB0059B52E /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +464,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18B67FA12C482B3000A5DACD /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.1.1;
+			};
+		};
+		18B67FA42C482B3B00A5DACD /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.19.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18B67FA22C482B3000A5DACD /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18B67FA12C482B3000A5DACD /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		18B67FA52C482B3B00A5DACD /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18B67FA42C482B3B00A5DACD /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		18B67FA72C482B3B00A5DACD /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18B67FA42C482B3B00A5DACD /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 187E56B72C45B2EE0059B52E /* Project object */;
 }
