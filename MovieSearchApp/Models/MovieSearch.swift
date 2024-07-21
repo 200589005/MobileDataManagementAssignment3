@@ -7,7 +7,60 @@
 
 import Foundation
 
+//
+//  MovieSearch.swift
+//  MovieSearchApp
+//
+//  Created by Mitul Patel on 15/07/24.
+//
+
+import Foundation
+
+class MovieSearchResponse: NSObject {
+    var search: [MovieSearch] = []
+    var totalResults: String = ""
+    var response: String = ""
+
+    // MARK: - Initialization
+    override init() {
+        super.init()
+    }
+
+    init(dictData: [String: Any]) {
+        if let searchResults = dictData["Search"] as? [[String: Any]] {
+            for movieData in searchResults {
+                let movie = MovieSearch(dictData: movieData)
+                search.append(movie)
+            }
+        }
+        totalResults = setDataInString(dictData["totalResults"] as AnyObject)
+        response = setDataInString(dictData["Response"] as AnyObject)
+    }
+}
+
 class MovieSearch: NSObject {
+    var title: String = ""
+    var year: String = ""
+    var imdbID: String = ""
+    var type: String = ""
+    var poster: String = ""
+
+    // MARK: - Initialization
+    override init() {
+        super.init()
+    }
+
+    init(dictData: [String: Any]) {
+        title = setDataInString(dictData["Title"] as AnyObject)
+        year = setDataInString(dictData["Year"] as AnyObject)
+        imdbID = setDataInString(dictData["imdbID"] as AnyObject)
+        type = setDataInString(dictData["Type"] as AnyObject)
+        poster = setDataInString(dictData["Poster"] as AnyObject)
+    }
+}
+
+
+class MovieDetail: NSObject {
     var title: String = ""
     var year: String = ""
     var rated: String = ""

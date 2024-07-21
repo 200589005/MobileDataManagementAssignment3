@@ -7,9 +7,10 @@
 
 import UIKit
 
-class MovieDetailViewController: UIViewController {
+class MovieDetailViewController: BaseViewController {
     
-    var movie: MovieSearch?
+    var movie: MovieDetail?
+    var id: String = ""
     
     @IBOutlet weak var lblTitile: UILabel!
     @IBOutlet weak var lblActors: UILabel!
@@ -46,13 +47,39 @@ class MovieDetailViewController: UIViewController {
         super.viewDidLoad()
         
         self.setupNavigation()
-        self.setupUI()
+        self.setInitialUI()
+        self.getMovieDetails()
     }
     
     func setupNavigation() {
         self.navigationItem.title = "Movie Details"
         self.navigationItem.backButtonTitle = "Back"
         self.setupDefaultNavigation()
+    }
+    
+    func getMovieDetails() {
+        var dict: [String:String] = [:]
+        dict["apikey"] = Constant.API_KEY
+        dict["i"] = id
+        let url = "http://www.omdbapi.com/?\(dict.urlEncodedString())"
+        print(url)
+        self.showSpinner()
+        API.shared.unqualifiedRequest(url: url, method: .get, headers: [:], body: nil) { response, error in
+            self.hideSpinner()
+            if let error = error {
+                print(error)
+                return
+            }
+            guard let response = response else {
+                return
+            }
+            print(response.json)
+            DispatchQueue.main.async {
+                let modal = MovieDetail(dictData: response)
+                self.movie = modal
+                self.setupUI()
+            }
+        }
     }
     
     func setupUI() {
@@ -94,4 +121,37 @@ class MovieDetailViewController: UIViewController {
         imgPoster.sd_setImageCustom(url: movie.poster,placeHolderImage: UIImage(named: "no-photo"))
     }
     
+    func setInitialUI() {
+        
+        lblTitile.text = ""
+        lblActors.text = ""
+        lblDirectors.text = ""
+        lblWriter.text = ""
+        lblGenre.text = ""
+        lblRunTime.text = ""
+        lblRatedR.text = ""
+        lblYear.text = ""
+        lblPlot.text = ""
+        lblRatting1.text = ""
+        lblRatingAnswer.text = ""
+        lblRatting2.text = ""
+        lblRattingAnswer2.text = ""
+        lblRatting3.text = ""
+        lblRattingAnswer3.text = ""
+        
+        lblIMDBRating.text = ""
+        lblIMDBVotes.text = ""
+        lblMetascore.text = ""
+        lblBoxOffice.text = ""
+        lblAwards.text = ""
+        lblReleasedate.text = ""
+        lblCountry.text = ""
+        lblEnglish.text = ""
+        lblMovie.text = ""
+        lblProduction.text = ""
+        lblWebsite.text = ""
+        lblDVD.text = ""
+        lblIMDBID.text = ""
+        imgPoster.image = UIImage(named: "no-photo")
+    }
 }

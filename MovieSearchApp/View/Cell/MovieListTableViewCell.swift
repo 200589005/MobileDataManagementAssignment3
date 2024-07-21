@@ -38,9 +38,9 @@ class MovieListTableViewCell: UITableViewCell {
     
     func cellConfig(modal: MovieSearch) {
         lblMovies.text = modal.title
-//        lblStudio.text = modal.
-        lblStudio.isHidden = true
-        lblRating.text = modal.imdbRating
+        lblStudio.text = modal.type
+        lblStudio.isHidden = false
+        lblRating.text = modal.imdbID
         lblYear.text = modal.year
         imgMovies.sd_setImageCustom(url: modal.poster,placeHolderImage: UIImage(named: "no-photo"))
         

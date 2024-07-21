@@ -53,7 +53,7 @@ extension MovieSearchViewController: UISearchBarDelegate {
     @objc func performSearch(searchText: String) {
         var dict: [String:String] = [:]
         dict["apikey"] = Constant.API_KEY
-        dict["t"] = searchText
+        dict["s"] = searchText
         let url = "http://www.omdbapi.com/?\(dict.urlEncodedString())"
         print(url)
         API.shared.unqualifiedRequest(url: url, method: .get, headers: [:], body: nil) { response, error in
@@ -66,8 +66,8 @@ extension MovieSearchViewController: UISearchBarDelegate {
             }
             print(response.json)
             DispatchQueue.main.async {
-                let modal = MovieSearch(dictData: response)
-                self.arrMovies = [modal]
+                let modal = MovieSearchResponse(dictData: response)
+                self.arrMovies = modal.search
                 self.tblMovies.reloadData()
             }
         }
@@ -93,7 +93,7 @@ extension MovieSearchViewController : UITableViewDelegate,UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movieDetailVC: MovieDetailViewController = MovieDetailViewController.instantiateViewController(identifier: .main)
-        movieDetailVC.movie = arrMovies[indexPath.row]
+        movieDetailVC.id = arrMovies[indexPath.row].imdbID
         self.pushVC(movieDetailVC)
     }
     

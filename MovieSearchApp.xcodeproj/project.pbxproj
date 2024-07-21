@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1876074E2C4D5A3700AA8384 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876074D2C4D5A3700AA8384 /* BaseViewController.swift */; };
+		187607502C4D5AEC00AA8384 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876074F2C4D5AEC00AA8384 /* UIView+Extension.swift */; };
 		187E56C32C45B2EE0059B52E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E56C22C45B2EE0059B52E /* AppDelegate.swift */; };
 		187E56C52C45B2EE0059B52E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E56C42C45B2EE0059B52E /* SceneDelegate.swift */; };
 		187E56CA2C45B2EE0059B52E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 187E56C92C45B2EE0059B52E /* Base */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1876074D2C4D5A3700AA8384 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1876074F2C4D5AEC00AA8384 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		187E56BF2C45B2EE0059B52E /* MovieSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E56C22C45B2EE0059B52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		187E56C42C45B2EE0059B52E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				18B67FB02C482BB200A5DACD /* UIImage+Extension.swift */,
 				18B67FAF2C482BB200A5DACD /* UIViewControllerExtensions.swift */,
 				187E56E42C45C3750059B52E /* Dictionary+Extension.swift */,
+				1876074F2C4D5AEC00AA8384 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				18B67FA92C482B5300A5DACD /* Cell */,
 				187E56D62C45B3BB0059B52E /* MovieSearchViewController.swift */,
 				18B67FB32C482EA000A5DACD /* MovieDetailViewController.swift */,
+				1876074D2C4D5A3700AA8384 /* BaseViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1876074E2C4D5A3700AA8384 /* BaseViewController.swift in Sources */,
 				187E56C32C45B2EE0059B52E /* AppDelegate.swift in Sources */,
 				187E56DC2C45BDB50059B52E /* MovieSearch.swift in Sources */,
 				18B67FB12C482BB200A5DACD /* UIViewControllerExtensions.swift in Sources */,
@@ -239,6 +246,7 @@
 				18B67FB42C482EA000A5DACD /* MovieDetailViewController.swift in Sources */,
 				187E56E52C45C3750059B52E /* Dictionary+Extension.swift in Sources */,
 				187E56C52C45B2EE0059B52E /* SceneDelegate.swift in Sources */,
+				187607502C4D5AEC00AA8384 /* UIView+Extension.swift in Sources */,
 				187E56D72C45B3BB0059B52E /* MovieSearchViewController.swift in Sources */,
 				187E56DF2C45BE030059B52E /* Constant.swift in Sources */,
 				18B67FAE2C482B6400A5DACD /* MovieListTableViewCell.swift in Sources */,
@@ -409,9 +417,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MovieSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -436,9 +448,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MovieSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
